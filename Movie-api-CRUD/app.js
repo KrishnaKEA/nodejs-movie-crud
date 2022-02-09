@@ -18,18 +18,18 @@ app.get("/movies", (req, res) => {
 });
 
 // Displaying single movie with id -GET method.
-app.get("movies/:id",(req,res)=>{
-    const id = req.params.id,
-    if(id<= moviesLists.length-1){
-        res.json(moviesLists[id])
-    }else{
-        res.json({ message : `The desired movie with id: ${id} is not found.Try again later.`})
-    }
-})
+app.get("movies/:id", (req, res) => {
+	const id = req.params.id;
+	if (id <= moviesLists.length - 1) {
+		res.json(moviesLists[id]);
+	} else {
+		res.json({
+			message: `The desired movie with id: ${id} is not found.Try again later.`,
+		});
+	}
+});
 
 // Adding new movie- using POST method
-
-
 
 app.post("/movies", (req, res) => {
 	const newMovie = {
@@ -58,13 +58,15 @@ app.put("/movies/:id", (req, res) => {
 // Deleting movie with id - DELETE method.
 app.delete("/:id", (req, res) => {
 	const id = req.params.id;
-    if(id<= moviesLists.length-1){
-        moviesLists.splice(id, 1);
-	res.json("Successfully deleted.....");
-    } else{
-        res.json({ message:`The movie with id - ${id}you tried to delete,does not exists.....`})
-    }
-	
+	if (id <= moviesLists.length - 1) {
+		moviesLists.splice(id, 1);
+		res.json("Successfully deleted.....");
+	} else {
+		res.json({
+			message: `The movie with id - ${id}you tried to delete,does not exists.....`,
+		});
+	}
 });
+//assigning port.
 
 app.listen(8080);
