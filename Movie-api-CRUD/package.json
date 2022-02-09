@@ -1,0 +1,22 @@
+{
+  "name": "movie-api-crud",
+  "version": "1.0.0",
+  "description": "This is a part of homework of nodejs class where we have to use express to create the api and perform CRUD with out using databases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishnaKEA/nodejs-movie-crud.git"
+  },
+  "author": "Krishna Prasad Khanal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishnaKEA/nodejs-movie-crud/issues"
+  },
+  "homepage": "https://github.com/KrishnaKEA/nodejs-movie-crud#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
